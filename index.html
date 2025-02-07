@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuhm Survivors</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.0/pixi.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+        #gameContainer {
+            position: relative;
+            background-color: #1099bb;
+            margin-top: 20px; 
+        }
+
+        .ui-panel {
+            position: relative;
+            top: 0;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px; 
+        }
+
+        .score, .level, .health {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .game-over {
+            font-size: 48px;
+            color: #ff0000;
+            text-align: center;
+        }
+
+        .restart-button {
+            font-size: 24px;
+            color: white;
+            background-color: #ff6600;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            margin-top: 20px;
+        }
+
+        .restart-button:hover {
+            background-color: #ff3300;
+        }
+    </style>
+</head>
+<body>
+    <!-- UI панель -->
+    <div class="ui-panel">
+        <div id="score" class="score">Очки: 0</div>
+        <div id="level" class="level">Уровень: 1</div>
+        <div id="health" class="health">Здоровье: 100</div>
+    </div>
+
+    <!-- Контейнер для игры -->
+    <div id="gameContainer">
+        <div id="gameScreen"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
